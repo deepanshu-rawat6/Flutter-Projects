@@ -19,17 +19,22 @@ class _HomePageState extends State<HomePage> {
   bool isCross = true;
   // late= for initialising var later in the file(will contain value in the future)
   String message = "Hello";
-  List<String> gameState=[];
-
+  List<String> gameState = [];
 
   // initState
   void intitState() {
     super.initState();
     setState(() {
       this.gameState = [
-        "empty","empty","empty",
-        "empty","empty","empty",
-        "empty","empty","empty"
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty"
       ];
     });
   }
@@ -37,10 +42,17 @@ class _HomePageState extends State<HomePage> {
   // resetGame
   resetGame() {
     setState(() {
+      this.message = "Let the game begin!";
       this.gameState = [
-        "empty","empty","empty",
-        "empty","empty","empty",
-        "empty","empty","empty"
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty",
+        "empty"
       ];
     });
   }
