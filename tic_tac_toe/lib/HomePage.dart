@@ -1,10 +1,14 @@
+// ignore: file_names
 // ignore_for_file: unnecessary_this
-
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
-  State<HomePage> createState() => _HomePageState();
+  // State<HomePage> createState() => _HomePageState();
+  // ignore: library_private_types_in_public_api
+  _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
@@ -14,23 +18,18 @@ class _HomePageState extends State<HomePage> {
 
   bool isCross = true;
   // late= for initialising var later in the file(will contain value in the future)
-   late String message;
-   late List<String> gameState;
+  String message = "Hello";
+  List<String> gameState=[];
+
 
   // initState
   void intitState() {
     super.initState();
     setState(() {
       this.gameState = [
-        "empty",
-        "empty",
-        "empty",
-        "empty",
-        "empty",
-        "empty",
-        "empty",
-        "empty",
-        "empty"
+        "empty","empty","empty",
+        "empty","empty","empty",
+        "empty","empty","empty"
       ];
     });
   }
@@ -39,15 +38,9 @@ class _HomePageState extends State<HomePage> {
   resetGame() {
     setState(() {
       this.gameState = [
-        "empty",
-        "empty",
-        "empty",
-        "empty",
-        "empty",
-        "empty",
-        "empty",
-        "empty",
-        "empty"
+        "empty","empty","empty",
+        "empty","empty","empty",
+        "empty","empty","empty"
       ];
     });
   }
@@ -57,9 +50,9 @@ class _HomePageState extends State<HomePage> {
     if (this.gameState[index] == "empty") {
       setState(() {
         if (this.isCross) {
-          this.gameState[index] = 'cross';
+          this.gameState[index] = "cross";
         } else {
-          this.gameState[index] = 'circle';
+          this.gameState[index] = "circle";
         }
         this.isCross = !this.isCross;
         this.checkWin();
