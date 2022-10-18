@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Tic Tac Toe Game',
       theme: ThemeData(
         // Primary color vs Primary Swatch
-        primarySwatch: Colors.purple 
+        primarySwatch: Colors.purple
       ),
       home: const HomePage(),
     );

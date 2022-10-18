@@ -186,7 +186,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           MaterialButton(
-            color: Colors.purple,
+            color: Colors.purple.shade300,
             minWidth: 300.0,
             height: 50.0,
             child: const Text(
